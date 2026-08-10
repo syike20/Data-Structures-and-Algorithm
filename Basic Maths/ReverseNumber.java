@@ -8,7 +8,6 @@ class ReverseNumber {
             n = n / 10 ;
         }
         return reverseNum;
-
         
     }
     public static void main(String[] args){
@@ -18,4 +17,6 @@ class ReverseNumber {
 
 
     }
+    //Time Complexity = O(logN)
+    //Space Complexity = O(1)
 }
