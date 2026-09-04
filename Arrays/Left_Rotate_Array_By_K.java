@@ -32,7 +32,7 @@ public class Left_Rotate_Array_By_K {
     public static void Optimal(int[]arr , int n , int d ){
         Reverse(arr,0,d-1);
         Reverse(arr, d, n-1);
-        Reverse(arr,0,n--1);
+        Reverse(arr,0,n-1);
         for(int i=0 ; i<n ;i++){
             System.out.print(arr[i]+" ");
         }
