@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.HashSet;
 
- class UnionOfSortedArrays {
+public class UnionOfSortedArrays {
 
     public static void BruteForce(int arr1[] , int arr2[] , int m , int n ){
         HashSet<Integer> set = new HashSet<>();
@@ -37,16 +37,14 @@ import java.util.HashSet;
             if(arr1[i]<arr2[j]){
                 if(union.isEmpty() || union.get(union.size()-1 )!= arr1[i]){
                     union.add(arr1[i]);
+                    i++;
                 }
-                i++;
             }
-
-
             else if(arr2[j]<arr1[i]){
                 if(union.isEmpty() || union.get(union.size()-1) != arr2[j]){
-                    union.add(arr2[j]);  
+                    union.add(arr2[j]);
+                    j++;
                 }
-                j++;
             }
             else{
                 if(union.isEmpty() || union.get(union.size()-1) != arr1[i]){
@@ -55,19 +53,18 @@ import java.util.HashSet;
                 i++;
                 j++;
             }
-            
         }
         while(i<m){
             if(union.isEmpty() || union.get(union.size()-1 )!= arr1[i]){
-                union.add(arr1[i]);
-            }
-            i++;
+                    union.add(arr1[i]);
+                    i++;
+                }
         }
         while (j<n) {
             if(union.isEmpty() || union.get(union.size()-1 )!= arr2[j]){
-                union.add(arr2[j]);
-            }
-            j++;
+                    union.add(arr2[j]);
+                    j++;
+                }
         }
         System.out.println(union);
     }
