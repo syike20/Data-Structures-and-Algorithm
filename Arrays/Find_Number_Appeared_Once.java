@@ -33,6 +33,7 @@
             for(int i=0 ; i<=maxElement ; i++){
                 if(hash[i]==1){
                     System.out.println(i);
+                    return;
                 }
             }
         }
