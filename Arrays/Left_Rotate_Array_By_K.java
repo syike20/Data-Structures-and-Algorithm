@@ -1,7 +1,7 @@
 
 public class Left_Rotate_Array_By_K {
     public static void BruteForce(int[] arr , int n , int d){
-        d = d % n ;
+        
 
         int[]temp = new int[d];
         for(int i=0 ; i<d ; i++){
@@ -41,6 +41,7 @@ public class Left_Rotate_Array_By_K {
         int[] arr = {1,2,3,4,5,6,7};
         int n = arr.length;
         int d = 3;
+        d = d % n ;
         //output : 4,5,6,7,1,2,3
         Optimal(arr, n, d);
 
