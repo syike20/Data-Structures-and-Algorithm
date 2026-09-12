@@ -7,14 +7,10 @@ import java.util.HashSet;
         HashSet<Integer> set = new HashSet<>();
 
         for(int i=0 ; i<m ; i++){
-            if(!set.contains(arr1[i])){
-                set.add(arr1[i]);
-            }
+            set.add(arr1[i]);
         }
         for(int i=0 ; i<n ; i++){
-            if(!set.contains(arr2[i])){
-                set.add(arr2[i]);
-            }
+            set.add(arr2[i]);
         }
         int union[] = new int[set.size()];
         int i = 0 ;
