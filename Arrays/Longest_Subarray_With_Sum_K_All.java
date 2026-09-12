@@ -1,5 +1,5 @@
 import java.util.HashMap;
-public class Longest_Subarray_With_Sum_K {
+public class Longest_Subarray_With_Sum_K_All{
 
     public static int Optimal(int[] arr , int n , int k){
         HashMap<Integer,Integer> map = new HashMap<>();
