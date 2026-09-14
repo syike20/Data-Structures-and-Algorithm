@@ -40,17 +40,12 @@
         public static void BetterOFBetter(int[]arr , int n){
             HashMap <Integer,Integer> map = new HashMap<>();
             for(int element : arr){
-                if(map.containsKey(element)){
-                    map.put(element, map.get(element)+1);
-                }
-                else{
-                    map.put(element, 1);
-                }
+                map.put(element,map.getOrDefault(element,0)+1);
             }
-            for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            if (entry.getValue() == 1) {
-                System.out.println(entry.getKey());
-            }
+            for (int element : arr) {
+                if (map.get(element) == 1) {
+                    System.out.println(element);
+                }
             }
         }
         public static void Optimal(int[] arr , int n ){
