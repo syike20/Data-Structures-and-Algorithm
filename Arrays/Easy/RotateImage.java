@@ -4,7 +4,7 @@ class RotateImage{
         int rotated[][] = new int[n][n];
         for(int i=0 ; i<n ; i++){
             for(int j=0 ; j<n ; j++){
-                rotated[j][n-1-i] = matrix[i][j];
+                rotated[j][n-1-i] = matrix[i][j]; //reverse the row index so it becomes a column index from the opposite side.
             }
         }
         return rotated;
